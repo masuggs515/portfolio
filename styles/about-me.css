@@ -19,7 +19,7 @@
 
 
 #overlay{
-    background-image: url('/images/project-even.png');
+    background-image: url('../images/about-me-bg.jpg');
     background-clip: border-box;
     background-repeat: no-repeat;
     background-size: cover;

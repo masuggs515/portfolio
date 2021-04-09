@@ -170,7 +170,7 @@ i{
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    background: url('/images/menu-hamburger.png');
+    background: url('../images/menu-hamburger.png');
     filter: invert(1);
     background-repeat: no-repeat;
     background-size: 40px;
@@ -179,7 +179,7 @@ i{
 }
 
 .toggle.active{
-    background: url('/images/menu-exit.png');
+    background: url('../images/menu-exit.png');
     background-repeat: no-repeat;
     background-size: 40px;
     margin-right: 25vw;

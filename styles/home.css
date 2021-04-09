@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.cursor{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-timing-function: ease-out;
+    
+}
+
+.showcase{
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vw;
+    display: flex;
+    color: rgb(233, 233, 233);
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.7s;
+}
+
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.4;
+    filter: grayscale(1);
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #011c44;
+    background-blend-mode: darken;
+    z-index: -2;
+}
+
+/* .showcase.active{
+    width: 75vw;
+} */
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(233,233,233);
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 20px 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2 a{
+    color: rgb(233,233,233);
+    text-decoration: none;
+}
+
+.logo{
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+
+.text{
+    position: relative;
+    width: 40vw;
+}
+
+.text h2{
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(233,233,233);
+    color: #111;
+    margin-top: 2vh;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+    padding: 8px 10px;
+    cursor: none;
+}
+
+.contact{
+    position: absolute;
+    bottom: 0%;
+    left: 9vw;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 10vh 1vw;
+    
+}
+.contact li a{
+    color: rgb(233,233,233);
+    padding-right: 16px;
+    font-size: 1.3rem;
+    padding-top: 3px;
+    cursor: none;
+}
+i{
+    padding: 5px;
+}
+.contact li{
+    transition: 0.5s;
+}
+.contact li:hover {
+    animation: bob 1s;
+    animation-iteration-count: infinite;
+}
+
+.menu{
+    position: absolute;
+    z-index: -3;
+    width: 25vw;
+    height: 100%;
+    right: -25vw;
+    padding: 0 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  rgb(11, 32, 56);
+    padding-bottom: 20vh;
+    transition: 0.7s;
+    opacity: 0;
+}
+.menu.active{
+    right: 0;
+    z-index: 5;
+    opacity: 0.9;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background: url('/images/menu-hamburger.png');
+    filter: invert(1);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    transition: 0.7s;
+}
+
+.toggle.active{
+    background: url('/images/menu-exit.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    margin-right: 25vw;
+    background-position: center;
+    filter: invert(1);
+    z-index: 101;
+}
+
+.menu h4{
+    text-transform: uppercase;
+    color: rgb(93, 122, 150);
+    padding-bottom: 4px;
+}
+hr{
+    border-color: rgb(93, 122, 150);
+}
+
+.menu li{
+    margin-top: 40px;
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 30px;
+    color: rgb(77, 125, 170);
+    z-index: 5;
+    transition: 0.2s;
+    cursor: none;
+
+}
+
+.menu li a:hover {
+    padding-right: 40px;
+    margin-right: 40px;
+    font-size: 1.1rem;
+}
+
+@keyframes bob {
+    0%{
+        transform: translateY(-4px) scale(1.2); 
+    }
+    50%{
+      transform: translateY(-8px) scale(1.2);
+    }
+    100%{
+        transform: translateY(-4px) scale(1.2);
+    }
+}
+
+

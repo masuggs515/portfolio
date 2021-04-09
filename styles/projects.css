@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(14, 57, 97);
+}
+
+.project-list{
+    position: fixed;
+    top: 3vh;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+.project-list a{
+    background-color: rgb(77, 125, 170);
+    color: rgb(11, 32, 56);
+    text-decoration: none;
+    padding: 3px 9px;
+    margin: 0 3px;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.project-list a:hover{
+    background-color: rgb(11, 32, 56);
+    color: rgb(77, 125, 170);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(233,233,233);
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 35px 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2 a{
+    color: rgb(233,233,233);
+    text-decoration: none;
+}
+
+.logo{
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+
+.menu{
+    position: fixed;
+    z-index: -3;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    right: -25vw;
+    padding: 0 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  rgb(11, 32, 56);
+    padding-bottom: 20vh;
+    transition: 0.7s;
+    opacity: 0;
+}
+.menu.active{
+    right: 0;
+    z-index: 5;
+    opacity: 0.9;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background: url('/images/menu-hamburger.png');
+    filter: invert(1);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.toggle.active{
+    background: url('/images/menu-exit.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    margin-right: 25vw;
+    background-position: center;
+    filter: invert(1);
+    z-index: 101;
+}
+
+.menu h4{
+    text-transform: uppercase;
+    color: rgb(93, 122, 150);
+    padding-bottom: 4px;
+}
+hr{
+    border-color: rgb(93, 122, 150);
+}
+
+.menu li{
+    margin-top: 40px;
+    list-style: none;
+    overflow-y: hidden;
+
+}
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 30px;
+    color: rgb(77, 125, 170);
+    z-index: 5;
+    transition: 0.2s;
+}
+
+.menu li a:hover {
+    padding-right: 40px;
+    margin-right: 40px;
+    font-size: 1.1rem;
+}
+
+/* Odd projects 1,3,5 */
+
+.box-odd{
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
+    background: url('/images/about-me-bg.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-odd{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10vw;
+    color: rgb(233,233,233);
+}
+
+.project-odd img{
+    width: 100%;
+}
+
+.project-odd p{
+    margin: 2vh 15vw 2vh 0;
+
+}
+
+.project-odd a{
+    text-transform: uppercase;
+    color: rgb(77, 125, 170);
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+.project-odd a:hover{
+    color: orange;
+}
+
+.project-odd a i{
+    font-size: 1.5rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(14, 57, 97);
+  }
+ 
+  
+  .image-container:hover .project-overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .project-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Even projects 2,4,6 */
+
+  .box-even{
+    clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
+    background:url('/images/project-even.png') no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-even{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10vw;
+    color: rgb(233,233,233);
+}
+
+.project-even img{
+    width: 100%;
+}
+
+.project-even .project-desc{
+    margin-left: 10vw;
+}
+.project-even p{
+    margin: 2vh 0 2vh 0;
+
+}
+.project-even .project-desc{
+    text-align: end;
+}
+
+.project-even a{
+    text-transform: uppercase;
+    color: rgb(77, 125, 170);
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+.project-even a:hover{
+    color: orange;
+}
+
+.project-even a i{
+    font-size: 1.5rem;
+}
+

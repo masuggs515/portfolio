@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#main{
+    background-color: rgb(14, 57, 97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.7s;
+    display: flex;
+    
+}
+
+
+#overlay{
+    background-image: url('/images/project-even.png');
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    clip-path: polygon(100% 8%, 100% 25%, 100% 100%, 40% 100%, 0 100%, 0 26%);
+    transition: 0.7s;
+    display: flex;
+}
+
+#main header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(233,233,233);
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 20px 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main header h2 a{
+    color: rgb(233,233,233);
+    text-decoration: none;
+    animation: on-load-header 5s forwards;
+}
+
+#main header .toggle{
+    animation: on-load-header 5s forwards;
+}
+.logo{
+    color: rgb(233,233,233);
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    margin: 30vh 15vw 20vh 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(14, 57, 97);
+    animation: content-onload 3s forwards;
+}
+
+
+#overlay .img-container{
+    width: 100%;
+    height: 100%;
+    margin-right: 8vw;
+    
+}
+#overlay .img-container img{
+    height: 100%;
+    width: 100%;
+}
+#overlay .about-me-container{
+    width: 100%;
+    padding-right: 5vw;
+}
+#overlay .about-me-container p, #overlay .about-me-container h3 {
+    text-align: end;
+    margin: 2vh 0;
+    width: 100%;
+    color: rgb(233,233,233);
+}
+
+@keyframes on-load-header {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes content-onload {
+    0%{
+        top: 200vh;
+    }
+    80%{
+        top: -40px;
+    }
+   
+    100%{
+        top: 0;
+    }
+    
+}

@@ -162,7 +162,7 @@ i{
 .menu.active{
     right: 0;
     z-index: 5;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .toggle{
@@ -231,4 +231,112 @@ hr{
     }
 }
 
+@media screen and (max-width: 1320px) {
+.text{
+    width: 60vw;
+}
+}
+
+@media screen and (max-width: 1100px) {
+    .text h2{
+        font-size: 3.5rem; 
+        margin-bottom: 0.5rem;
+  }
+  .text h3{
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+  }
+  .text p{
+      font-size: 0.8rem;
+      /* width: 80vw; */
+  }
+  .text a{
+      font-size: 1rem;
+  }
+    }
+
+
+@media screen and (max-width: 720px) {
+    .text{
+        width: 60vw;
+    }
+    .text h2{
+          font-size: 2.5rem; 
+          margin-bottom: 0.5rem;
+    }
+    .text h3{
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+    .text p{
+        font-size: 0.8rem;
+        /* width: 80vw; */
+    }
+    .text a{
+        font-size: 1rem;
+    } 
+
+    header{
+        z-index: 2;
+    }
+    .menu{
+        width: 100vw;
+        height: 22vh;
+        top: -20vh;
+        padding-bottom: 0;
+        font-size: 1rem;
+    } 
+    .menu h4{
+        font-size: 0.8rem;
+        padding-top: 5px;
+    }
+    .menu li{
+        padding-top: 0.8vh;
+        margin: 0;
+    }
+    .menu.active{
+        top: 0;
+        opacity: 1;
+    }
+    .toggle.active{
+        margin-top: 20vh;
+        margin-right: 0;
+    }
+
+    .menu li a{
+        padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    header h2{
+        font-size: 1rem;
+    }
+
+    .toggle{
+        background-size: 30px;
+    }
+
+
+
+    .text{
+        width: 100vw;
+    }
+    .text h2{
+          font-size: 1.5rem; 
+          margin-bottom: 0.5rem;
+    }
+    .text h3{
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    .text p{
+        font-size: 0.6rem;
+        /* width: 80vw; */
+    }
+    .text a{
+        font-size: 0.5rem;
+    }
+}
 

@@ -7,15 +7,70 @@
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
-body{
-    background-color: rgb(14, 57, 97);
+
+
+
+/* Background stripes */
+.bg-1{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(11, 32, 56);
 }
+
+.bg-2{
+    position: absolute;
+    top: 50vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(170deg, rgb(11,32,56) 30%, rgb(6,9,46));
+
+}
+
+.bg-3{
+    position: absolute;
+    top: 150vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(170deg, rgb(6, 9, 46) 30%, rgb(0,92,128));
+}
+
+.bg-4{
+    position: absolute;
+    top: 250vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(190deg, rgb(0,92,128), rgb(82,0, 0));
+
+}
+
+.bg-5{
+    position: absolute;
+    top: 350vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(170deg, rgb(82,0,0) 10%, rgb(54, 3, 65) 70%);
+    
+}
+
+.bg-6{
+    position: absolute;
+    top: 450vh;
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(54,3,65);
+}
+
+
 
 .project-list{
     position: fixed;
     top: 3vh;
     width: 100%;
+    margin-left: 5vw;
     align-self: center;
     display: flex;
     justify-content: center;
@@ -151,10 +206,12 @@ hr{
     align-items: center;
 }
 
+
+
 .project-odd{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 10vw;
     color: rgb(233,233,233);
 }
@@ -164,7 +221,7 @@ hr{
 }
 
 .project-odd p{
-    margin: 2vh 15vw 2vh 0;
+    margin: 2vh 10vw 2vh 0;
 
 }
 
@@ -241,7 +298,7 @@ hr{
 .project-even{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 10vw;
     color: rgb(233,233,233);
 }
@@ -250,11 +307,12 @@ hr{
     width: 100%;
 }
 
+
 .project-even .project-desc{
     margin-left: 10vw;
 }
 .project-even p{
-    margin: 2vh 0 2vh 0;
+    margin: 2vh 0 2vh 5vw;
 
 }
 .project-even .project-desc{
@@ -276,3 +334,128 @@ hr{
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1320px) {
+    .project-list a{
+        font-size: 0.9rem;
+    }
+    }
+    
+@media screen and (max-width: 1150px) {
+    header h2{
+        font-size: 1.5rem;
+    }
+    .project-list{
+        margin-left: 10vw;
+    }
+    .project-list a{
+        font-size: 0.7rem;
+    }
+    }
+
+
+
+@media screen and (max-width:800px) {
+    header{
+        padding: 0;
+    }
+    .toggle{
+        background-size: 30px;
+    }
+    .toggle.active{
+        margin: 20vh 0 0 0;
+    }
+
+    .menu{
+        height: 20vh;
+        width: 100vw;
+        top: -20vh;
+        margin: 0;
+        padding: 0;
+        font-size: 0.5rem;
+    }
+
+    .menu h4{
+        padding-bottom: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    .menu li{
+        list-style: none;
+        overflow-y: hidden;   
+        margin: 0; 
+        padding-top: 3px;
+    }
+    .menu li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 0;
+        font-size: 1rem;
+        color: rgb(77, 125, 170);
+        transition: 0.2s;
+    }
+    
+    .menu li a:hover {
+        padding-right: 20px;
+        margin-right: 20px;
+        font-size: 1.1rem;
+    }
+
+    .menu.active{
+        top: 0;
+        z-index: 100;
+        opacity: 1;
+    }
+    .project-list{
+        top: 10vh;
+        margin-left: 0;
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .project-list a{
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
+    .project-odd{
+        margin: 0 10vw;
+        flex-direction: column-reverse;
+        height: 60%;
+    }
+
+    .project-odd p{
+        margin-right: 3vw;
+    }
+
+    .project-even{
+        margin: 0 10vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-even p{
+        margin: 0;
+        padding: 0;
+    }
+    .project-desc{
+        margin: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-desc h1{
+        font-size: 1.2rem;
+    }
+    .project-desc p{
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .project-desc a{
+        font-size: 0.7rem;
+    }
+
+}

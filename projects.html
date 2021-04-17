@@ -15,28 +15,21 @@
 <body>
     <div class="transition swipe"></div>
     <div class="tran-load swipe-load active2"></div>
-    <!-- backgrounds -->
-    <div class="bg-1"></div>
-    <div class="bg-2"></div>
-    <div class="bg-3"></div>
-    <div class="bg-4"></div>
-    <div class="bg-5"></div>
-    <div class="bg-6"></div>
     <!-- Main -->
     <div id="main">
         <header>
             <h2 class="logo"><a class="transition-a" href="home.html">Michael Suggs</a></h2>
-            <div class="project-list">
-                <a href="#project1">Project One</a>
-                <a href="#project2">Project Two</a>
-                <a href="#project3">Project Three</a>
-                <a href="#project4">Project Four</a>
-                <a href="#project5">Project Five</a>
-
+            <div>
+                <a class="transition-a" href="home.html">Home</a>
+                <a class="transition-a current" href="projects.html">Projects</a>
+                <a class="transition-a" href="resume.html">Résumé</a>
+                <a class="transition-a" href="about-me.html">About Me</a>
             </div>
             <div class="toggle"></div>
 
         </header>
+
+        <h1 class="section-head-top">My Projects</h1>
         <div id="project1" class="box-odd">
             <div class="project-odd">
                 <div class="project-desc">
@@ -116,8 +109,15 @@
             </div>
         </div>
 
-        <div id="project4" class="box-even">
-            <div class="project-even">
+        <h1 class="section-head">Smaller side projects</h1>
+
+        <div class="project-group">
+
+            <div class="group-item">
+                <div class="project-desc">
+                    <h1>Connect Four</h1>
+                    <p>Connect Four game built with HTML, CSS, and JQuery.</p>
+                </div>
                 <div class="image-container">
                     <img src="./images/connect-four.png" alt="Avatar" class="project-image">
                     <a target="_blank" href="https://masuggs515.github.io/Connect_Four/">
@@ -126,33 +126,17 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-desc">
-                    <h1>Connect Four</h1>
-                    <p>Connect Four game built with HTML, CSS, and JQuery. Coin flip to decide who goes first and
-                        options for small, medium, or large board. Classic game with multiple options for variety.</p>
-                    <div>
-                        <a target="_blank" href="https://github.com/masuggs515/Connect_Four"><i
-                                class="fab fa-github"></i> Code
-                            for Connect Four</a>
-
-                    </div>
-                </div>
+                <a target="_blank" href="https://github.com/masuggs515/Connect_Four"><i class="fab fa-github"></i> Code
+                    for Connect Four</a>
             </div>
-        </div>
 
-        <div id="project5" class="box-odd">
-            <div class="project-odd">
+
+            <div class="group-item">
                 <div class="project-desc">
-                    <h1>Gif Generator</h1>
-                    <p>Search topic that you desire and a gif will be populated. Layout with Bootstrapv5. Site built
-                        with HTML, CSS, and JQuery. API used for gif's is the <a href="https://api.giphy.com/">GIPHY</a>
+                    <h1>GIF Generator</h1>
+                    <p class="project-p">Gif generator built with HTML, CSS, and JQuery. API used for gif's is the <a
+                            href="https://api.giphy.com/">GIPHY</a>
                         API.</p>
-                    <div>
-                        <a target="_blank" href="https://github.com/masuggs515/Giphy_Party"><i
-                                class="fab fa-github"></i> Code
-                            for Gif Generator</a>
-
-                    </div>
                 </div>
 
                 <div class="image-container">
@@ -163,21 +147,43 @@
                         </div>
                     </a>
                 </div>
+                <a target="_blank" href="https://github.com/masuggs515/Giphy_Party"><i class="fab fa-github"></i> Code
+                    for Gif Generator</a>
+            </div>
+
+            <div class="group-item">
+                <div class="project-desc">
+                    <h1>Meme Generator</h1>
+                    <p>Meme generator built with HTML, CSS, and JQuery.</p>
+                </div>
+                <div class="image-container">
+                    <img src="./images/meme-generator.png" alt="Avatar" class="project-image">
+                    <a target="_blank" href="https://masuggs515.github.io/meme_generator/Meme.html">
+                        <div class="project-overlay">
+                            <div class="project-text">Visit Site Here</div>
+                        </div>
+                    </a>
+                </div>
+                <a target="_blank" href="https://github.com/masuggs515/meme_generator"><i class="fab fa-github"></i>
+                    Code
+                    for Meme Generator</a>
+
             </div>
         </div>
-    </div>
 
-    <ul class="menu">
-        <h4>Menu</h4>
-        <hr>
-        <li><a class="transition-a" href="home.html">Home</a> </li>
-        <li><a class="transition-a" href="#">Resume</a> </li>
-        <li><a class="transition-a" href="projects.html">Projects</a> </li>
-        <li><a class="transition-a" href="about-me.html">About Me</a> </li>
-    </ul>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./app.js"></script>
+
+
+        <ul class="menu">
+            <h4>Menu</h4>
+            <hr>
+            <li><a class="transition-a" href="home.html">Home</a> </li>
+            <li><a class="transition-a" href="resume.html">Résumé</a> </li>
+            <li><a class="transition-a" href="projects.html">Projects</a> </li>
+            <li><a class="transition-a" href="about-me.html">About Me</a></li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>

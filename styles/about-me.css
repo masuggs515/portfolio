@@ -66,6 +66,10 @@ header > div a{
     justify-content: center;
     margin-left: 20vw;
 }
+
+#about-desc h2{
+    margin-bottom: 3vh;
+}
 .img-container{
     width: 50vw;
     height: 100vh;
